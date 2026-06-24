@@ -21,6 +21,12 @@ public class ProductoController {
         return productoRepo.findAll();
     }
 
+    @GetMapping("/{id}")
+    public Producto obtenerPorId(@PathVariable Long id) {
+        return productoRepo.findById(id)
+                .orElseThrow(() -> new RuntimeException("Producto no encontrado"));
+    }
+
     @GetMapping("/top")
     public List<Producto> top8() {
         return productoRepo.findTop8ByOrderByIdAsc();
