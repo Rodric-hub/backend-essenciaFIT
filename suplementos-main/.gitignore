@@ -60,3 +60,7 @@ build/
 
 # Otros
 HELP.md
+# Metals / Scala
+.metals/
+.bloop/
+.bsp/
