@@ -25,10 +25,10 @@ public class Usuario {
     @Size(min = 8, message = "La contraseña debe tener al menos 8 caracteres")
     private String contrasena;
 
-    // Token opcional, no es obligatorio para login manual
+    
     private String token;
 
-    // Por simplicidad usamos un String; valor por defecto ROLE_USER
+    // String valor por defecto ROLE_USER
     @NotBlank
     private String rol = "ROLE_USER";
 

@@ -36,7 +36,7 @@ public class SecurityConfig {
 
         http
             .csrf(csrf -> csrf.disable())
-            .cors(cors -> {}) // 👈 IMPORTANTE (NO usar cors.configure(http))
+            .cors(cors -> {}) 
             .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> auth
                     .requestMatchers(

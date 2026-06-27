@@ -18,13 +18,13 @@ public class UsuarioDetails implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        // Obtiene los roles del usuario, asigna "USER" si es null o vacío
+        
         String roles = usuario.getRol();
         if (roles == null || roles.isBlank()) {
             roles = "USER"; // rol por defecto
         }
 
-        // Si hay múltiples roles separados por coma, los mapea a GrantedAuthority
+        
         return Arrays.stream(roles.split(","))
                      .map(String::trim)
                      .filter(r -> !r.isEmpty())
@@ -62,7 +62,6 @@ public class UsuarioDetails implements UserDetails {
         return true;
     }
 
-    // Permite acceder al objeto Usuario desde templates o controllers
     public Usuario getUsuario() {
         return usuario;
     }

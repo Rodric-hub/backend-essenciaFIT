@@ -19,7 +19,7 @@ body {
   transition: transform 0.3s ease;
 }
 
-/* asegura que todas las imagenes sean del mismo tamaño*/
+/*  imagenes mismo tamaño*/
 .card-img-top {
   width: 100%;
   height: 250px; /* más alta o baja */
@@ -78,7 +78,7 @@ body {
     flex-direction: column;
 }
 
-/* Forzar que el contenido no desacomode los botones */
+/* contenido no desacomode los botones */
 .card-body {
     flex-grow: 1;
     display: flex;
