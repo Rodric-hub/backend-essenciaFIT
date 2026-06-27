@@ -107,7 +107,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Elimina la dependencia de BouncyCastle si no la usas -->
         <!-- <dependency>
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcprov-jdk15on</artifactId>
