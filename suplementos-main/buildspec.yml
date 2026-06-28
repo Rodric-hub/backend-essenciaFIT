@@ -7,10 +7,12 @@ phases:
   pre_build:
     commands:
       - echo "Iniciando fase de pre-build"
+      - cd suplementos-main
       - chmod +x mvnw
   build:
     commands:
       - echo "Compilando y corriendo tests"
+      - cd suplementos-main
       - ./mvnw clean verify
   post_build:
     commands:
@@ -18,5 +20,5 @@ phases:
 
 artifacts:
   files:
-    - target/*.jar
+    - suplementos-main/target/*.jar
   discard-paths: yes
