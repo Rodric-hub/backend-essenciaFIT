@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto21
+  pre_build:
+    commands:
+      - echo "Iniciando fase de pre-build"
+      - chmod +x mvnw
+  build:
+    commands:
+      - echo "Compilando y corriendo tests"
+      - ./mvnw clean verify
+  post_build:
+    commands:
+      - echo "Build completado"
+
+artifacts:
+  files:
+    - target/*.jar
+  discard-paths: yes
